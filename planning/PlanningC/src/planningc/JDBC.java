@@ -1,17 +1,66 @@
+//STEP 1. Import required packages
+package mariadb;
 
-
-import java.lang.*;
 import java.sql.*;
 
-public class JDBC {
-    public static void main(String[] args){
-        try{
-            Connection conn = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/test?" + "user=java&password=admin");
-        }catch(SQLException ex){
-            System.out.println("SQLException: " + ex.getMessage());
-            System.out.println("SQLState: " + ex.getSQLState());
-        }catch(Exception ex){
-            System.out.println("Exception: " + ex.getMessage());
-        }
-    }
-}
+public class Mariadb {
+    // JDBC driver name and database URL
+
+    static final String JDBC_DRIVER = "org.mariadb.jdbc.Driver";
+    static final String DB_URL = "jdbc:mariadb://localhost";
+
+    //  Database credentials
+    static final String USER = "java";
+    static final String PASS = "admin";
+
+    public static void main(String[] args) {
+        Connection conn = null;
+        Statement stmt = null;
+        try {
+            //STEP 2: Register JDBC driver
+            Class.forName("org.mariadb.jdbc.Driver");
+
+            //STEP 3: Open a connection
+            System.out.println("Connecting to a selected database...");
+            conn = DriverManager.getConnection(
+                    "jdbc:mariadb://localhost", "java", "admin");
+            System.out.println("Connected database successfully...");
+
+            //STEP 4: Execute a query
+            System.out.println("Creating table in given database...");
+            stmt = conn.createStatement();
+
+            String sql = "CREATE TABLE REGISTRATION "
+                    + "(id INTEGER not NULL, "
+                    + " first VARCHAR(255), "
+                    + " last VARCHAR(255), "
+                    + " age INTEGER, "
+                    + " PRIMARY KEY ( id ))";
+
+            stmt.executeUpdate(sql);
+            System.out.println("Created table in given database...");
+        } catch (SQLException se) {
+            //Handle errors for JDBC
+            se.printStackTrace();
+        } catch (Exception e) {
+            //Handle errors for Class.forName
+            e.printStackTrace();
+        } finally {
+            //finally block used to close resources
+            try {
+                if (stmt != null) {
+                    conn.close();
+                }
+            } catch (SQLException se) {
+            }// do nothing
+            try {
+                if (conn != null) {
+                    conn.close();
+                }
+            } catch (SQLException se) {
+                se.printStackTrace();
+            }//end finally try
+        }//end try
+        System.out.println("Goodbye!");
+    }//end main
+}//end JDBCExample

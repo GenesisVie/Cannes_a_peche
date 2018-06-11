@@ -3,11 +3,11 @@ package mariadb;
 
 import java.sql.*;
 
-public class Mariadb {
+public class JDBC {
     // JDBC driver name and database URL
 
     static final String JDBC_DRIVER = "org.mariadb.jdbc.Driver";
-    static final String DB_URL = "jdbc:mariadb://localhost";
+    static final String DB_URL = "jdbc:mariadb://localhost:3306";
 
     //  Database credentials
     static final String USER = "java";
@@ -23,7 +23,7 @@ public class Mariadb {
             //STEP 3: Open a connection
             System.out.println("Connecting to a selected database...");
             conn = DriverManager.getConnection(
-                    "jdbc:mariadb://localhost", "java", "admin");
+                    "jdbc:mariadb://localhost:3306", "java", "admin");
             System.out.println("Connected database successfully...");
 
             //STEP 4: Execute a query

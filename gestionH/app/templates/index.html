@@ -1,12 +1,10 @@
 {% extends "base.html" %}
 
 {% block content %}
-  <html>
-      <head>
-          <title>{{ title }} - Hébergement Cannes</title>
-      </head>
-      <body>
-          <h1>Hello!</h1>
-      </body>
-  </html>
+    <h1>Hi, {{ current_user.username }}!</h1>
+    {% if hotels %}
+    <div><p>{{ hotels.name }}</p></div>
+    {% else %}
+    <div><p>Ajouter hotel</p></div>
+    {% endif %}
 {% endblock %}

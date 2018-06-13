@@ -46,8 +46,8 @@
       <file leaf-file-name="accueil.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/accueil.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="18" selection-start-line="18" selection-end-line="18" />
+            <state relative-caret-position="491">
+              <caret line="35" selection-start-line="35" selection-end-line="35" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#494#495#0" expanded="true" />
@@ -135,8 +135,8 @@
         <option value="$PROJECT_DIR$/src/Accueil.form" />
         <option value="$PROJECT_DIR$/src/accueilF.form" />
         <option value="$PROJECT_DIR$/src/accueilF.java" />
-        <option value="$PROJECT_DIR$/src/accueil.form" />
         <option value="$PROJECT_DIR$/src/accueil.java" />
+        <option value="$PROJECT_DIR$/src/accueil.form" />
       </list>
     </option>
   </component>
@@ -295,18 +295,17 @@
       <updated>1528880690789</updated>
       <workItem from="1528880697660" duration="3320000" />
       <workItem from="1528892349991" duration="5765000" />
-      <workItem from="1528899769923" duration="6314000" />
+      <workItem from="1528899769923" duration="6628000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15399000" />
+    <option name="totallyTimeSpent" value="15713000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="0" width="1922" height="1081" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info anchor="right" id="Palette" order="5" type="SLIDING" visible="true" weight="0.16475496" />
+      <window_info anchor="right" id="Palette" order="5" type="SLIDING" weight="0.16475496" />
       <window_info anchor="bottom" id="TODO" order="11" />
       <window_info anchor="bottom" id="Messages" order="4" sideWeight="0.49843588" weight="0.32923076" />
       <window_info anchor="right" id="Palette&#9;" order="1" />
@@ -316,11 +315,11 @@
       <window_info anchor="right" id="Maven Projects" order="4" />
       <window_info anchor="bottom" id="Database Changes" order="0" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="3" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="7" sideWeight="0.4979145" visible="true" weight="0.31897435" />
+      <window_info anchor="bottom" id="Run" order="7" sideWeight="0.4979145" weight="0.31897435" />
       <window_info anchor="bottom" id="Terminal" order="1" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="0" />
-      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.09489051" />
+      <window_info content_ui="combo" id="Project" order="5" visible="true" weight="0.09489051" />
       <window_info anchor="right" id="Database" order="3" weight="0.07239583" />
       <window_info anchor="bottom" id="Find" order="6" weight="0.32923076" />
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
@@ -581,8 +580,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/accueil.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="18" selection-start-line="18" selection-end-line="18" />
+        <state relative-caret-position="491">
+          <caret line="35" selection-start-line="35" selection-end-line="35" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#494#495#0" expanded="true" />

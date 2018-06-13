@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="accueil">
+  <grid id="27dc6" binding="panel1" default-binding="true" layout-manager="GridLayoutManager" row-count="2" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+    <margin top="0" left="0" bottom="0" right="0"/>
+    <constraints>
+      <xy x="20" y="20" width="1614" height="995"/>
+    </constraints>
+    <properties/>
+    <border type="none"/>
+    <children>
+      <grid id="98ef7" binding="panelMenu" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="0">
+        <constraints>
+          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties/>
+        <border type="none"/>
+        <children>
+          <toolbar id="91ed4">
+            <constraints/>
+            <properties/>
+            <border type="none"/>
+            <children>
+              <component id="718e9" class="javax.swing.JButton" binding="accueilB">
+                <constraints/>
+                <properties>
+                  <text value="Accueil"/>
+                </properties>
+              </component>
+              <component id="3920e" class="javax.swing.JButton" binding="planningB">
+                <constraints/>
+                <properties>
+                  <text value="Planning"/>
+                </properties>
+              </component>
+              <component id="4fe6a" class="javax.swing.JButton" binding="ajoutB">
+                <constraints/>
+                <properties>
+                  <text value="Ajout de films"/>
+                </properties>
+              </component>
+              <component id="77b23" class="javax.swing.JButton" binding="suppressionB">
+                <constraints/>
+                <properties>
+                  <text value="Suppression de films"/>
+                </properties>
+              </component>
+            </children>
+          </toolbar>
+        </children>
+      </grid>
+      <grid id="dd3e8" binding="panelAcc" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
+        <constraints>
+          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <visible value="true"/>
+        </properties>
+        <border type="none"/>
+        <children>
+          <component id="e7848" class="javax.swing.JLabel" binding="imgAcc">
+            <constraints/>
+            <properties>
+              <horizontalAlignment value="10"/>
+              <horizontalTextPosition value="10"/>
+              <icon value="img/9278561.image.jpg"/>
+              <text value=""/>
+              <visible value="false"/>
+            </properties>
+          </component>
+        </children>
+      </grid>
+    </children>
+  </grid>
+</form>

@@ -4,7 +4,7 @@
     <h1>Bonjour, {{ current_user.username }}!</h1>
     <p>Voici la liste de vos hébergements : </p>
     {% for h in hotels %}
-      <div><h3>{{ h.name }} ({{ h.type }}, {{ h.numb_place }})</h3></div>
+      <a href="localhost:5000/{{ h.name }}"><h3>{{ h.name }} ({{ h.type }}, {{ h.numb_place }})</h3></a>
       {% for s in h.services %}
         <ul>
           <li>{{ s.name }}</li>
@@ -15,22 +15,4 @@
         <p>{{ pl.date }} : {{ pl.nbr_pl }} places</p>
       {% endfor %}
     {% endfor %}
-    <form action="" method="post">
-      {{ formS.nameS.label }}
-      {{ formS.nameS(size=20) }}
-      {{ formS.descrS.label }}
-      {{ formS.descrS(size=20) }}
-      {{ formS.hotel.label }}
-      {{ formS.hotel(size=20) }}
-      {{ formS.submitS() }}
-    </form>
-    <form action="" method="post">
-      {{ form.number.label }}
-      {{ form.number(size=10) }}
-      {{ form.jour.label }}
-      {{ form.jour(size=10) }}
-      {{ form.hotel.label }}
-      {{ form.hotel(size=10) }}
-      {{ form.submit() }}
-    </form>
 {% endblock %}

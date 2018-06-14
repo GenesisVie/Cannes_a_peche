@@ -2,6 +2,7 @@ from app import db
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask_login import UserMixin
 from app import login
+from sqlalchemy import update
 
 
 class User(UserMixin, db.Model):
@@ -62,7 +63,6 @@ class Place(db.Model):
     def __repr__(self):
         return '<Place {}>'.format(self.nbr_pl)
 
-    def change_pl(nbr_pl, jour, hotel):
-        pl = Place.query.filter_by(id=jour)
-        setattr(pl, 'nbr_pl', nbr_pl=nbr_pl)
+    def change_pl(self, nbr_pl, Hotel):
+        update(self).where(hotel=Hotel).values(nbr_pl=nbr_pl)
         db.session.commit()

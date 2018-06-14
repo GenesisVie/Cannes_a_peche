@@ -11,7 +11,8 @@ class LoginForm(FlaskForm):
 
 
 class PlaceForm(FlaskForm):
-    number = IntegerField('Nouveau nombre de place :', validators=[DataRequired()])
+    number = IntegerField('Nouveau nombre de place :',
+                          validators=[DataRequired()])
     jour = IntegerField('Numero jour :', validators=[DataRequired()])
     hotel = IntegerField('Hotel id :', validators=[DataRequired()])
     submit = SubmitField('OK')

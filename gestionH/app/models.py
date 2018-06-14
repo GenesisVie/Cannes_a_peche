@@ -7,7 +7,7 @@ from app import login
 class User(UserMixin, db.Model):
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(64), index=True, unique=True)
-    statut = db.Column(db.Boolean, unique=True, default=True)
+    statut = db.Column(db.Boolean, default=True)
     password_hash = db.Column(db.String(128))
 
     def set_password(self, password):
@@ -30,12 +30,39 @@ class Hotel(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(64), index=True, unique=True)
     type = db.Column(db.String(64))
-    num_place = db.Column(db.Integer)
+    numb_place = db.Column(db.Integer)
     resp_id = db.Column(db.Integer, db.ForeignKey('user.id'))
     owner_id = db.Column(db.Integer, db.ForeignKey('user.id'))
     resp = db.relationship('User', uselist=False, foreign_keys='Hotel.resp_id')
-    owner = db.relationship('User', uselist=False, foreign_keys='Hotel.owner_id')
+    owner = db.relationship('User', uselist=False,
+                            foreign_keys='Hotel.owner_id')
+    services = db.relationship('Service', backref='hotel')
+    places = db.relationship('Place', backref='hotel')
+
+    def __repr__(self):
+        return '<Hotel {}>'.format(self.name)
 
 
-def __repr__(self):
-    return '<Hotel {}>'.format(self.name)
+class Service(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(64), index=True, unique=True)
+    descr = db.Column(db.String(300))
+    hotel_id = db.Column(db.Integer, db.ForeignKey('hotel.id'))
+
+    def __repr__(self):
+        return '<Service {}>'.format(self.name)
+
+
+class Place(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    nbr_pl = db.Column(db.Integer)
+    date = db.Column(db.Date, index=True)
+    hotel_id = db.Column(db.Integer, db.ForeignKey('hotel.id'))
+
+    def __repr__(self):
+        return '<Place {}>'.format(self.nbr_pl)
+
+    def change_pl(nbr_pl, jour, hotel):
+        pl = Place.query.filter_by(id=jour)
+        setattr(pl, 'nbr_pl', nbr_pl=nbr_pl)
+        db.session.commit()

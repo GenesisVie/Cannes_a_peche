@@ -1,0 +1,53 @@
+from datetime import date
+
+u = User(id = 1, username = 'Pierre-Louis', statut = True)
+u.set_password('kaka')
+
+i = User(id = 2, username = 'David', statut = True)
+i.set_password('dbz')
+
+r = User (id = 3, username = 'Gerrard', statut = False)
+r.set_password('resp')
+
+h = Hotel(id = 1, name = 'Beaux rivages', type = "Hotel", numb_place=20, resp_id= 3, owner_id = 1)
+j = Hotel(id = 2, name = 'Les copains dabord', type = "Auberge", numb_place=50, resp_id= 3, owner_id = 1)
+k = Hotel(id = 3, name = 'Chez Max et Lili', type = "Villa", numb_place=6, resp_id= 3, owner_id = 2)
+
+s = Service(id = 1, name ='bar', descr='Pour se désaltérer', hotel=h)
+d = Service(id = 2, name ='sauna', descr='Eau chauffé à 35 degrés', hotel=h)
+
+p = Place(id = 1, nbr_pl = 23, date = date(2018,5,8), hotel=h)
+p1 = Place(id = 2, nbr_pl = 23, date = date(2018,5,9), hotel=h)
+p2 = Place(id = 3, nbr_pl = 23, date = date(2018,5,10), hotel=h)
+p3 = Place(id = 4, nbr_pl = 23, date = date(2018,5,11), hotel=h)
+p4 = Place(id = 5, nbr_pl = 23, date = date(2018,5,12), hotel=h)
+p5 = Place(id = 6, nbr_pl = 23, date = date(2018,5,13), hotel=h)
+p6 = Place(id = 7, nbr_pl = 23, date = date(2018,5,14), hotel=h)
+p7 = Place(id = 8, nbr_pl = 23, date = date(2018,5,15), hotel=h)
+p8 = Place(id = 9, nbr_pl = 23, date = date(2018,5,16), hotel=h)
+p9 = Place(id = 10, nbr_pl = 23, date = date(2018,5,17), hotel=h)
+p10 = Place(id = 11, nbr_pl = 23, date = date(2018,5,18), hotel=h)
+p11 = Place(id = 12, nbr_pl = 23, date = date(2018,5,19), hotel=h)
+
+db.session.add(u)
+db.session.add(i)
+db.session.add(r)
+db.session.add(h)
+db.session.add(j)
+db.session.add(k)
+db.session.add(s)
+db.session.add(d)
+db.session.add(p)
+db.session.add(p1)
+db.session.add(p2)
+db.session.add(p3)
+db.session.add(p4)
+db.session.add(p5)
+db.session.add(p6)
+db.session.add(p7)
+db.session.add(p8)
+db.session.add(p9)
+db.session.add(p10)
+db.session.add(p11)
+
+db.session.commit()

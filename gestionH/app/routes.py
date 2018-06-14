@@ -1,17 +1,29 @@
 from app import app
 from flask import render_template, flash, redirect, url_for, request
-from app.forms import LoginForm
+from app.forms import LoginForm, PlaceForm, NewService
 from flask_login import current_user, login_user, logout_user, login_required
-from app.models import User, Hotel
+from app.models import User, Hotel, Place, Service
 from werkzeug.urls import url_parse
 
 
-@app.route('/')
-@app.route('/index')
+@app.route('/', methods=['GET', 'POST'])
+@app.route('/index', methods=['GET', 'POST'])
 @login_required
 def index():
-    h = Hotel.query.filter_by(owner_id=current_user.id).first()
-    return render_template('index.html', title='Home', hotel=h)
+    if current_user.statut is True:
+        h = Hotel.query.filter_by(owner_id=current_user.id)
+    else:
+        h = Hotel.query.filter_by(resp_id=current_user.id)
+    form = PlaceForm()
+    if form.validate_on_submit():
+        Place.change_pl(form.number.data, form.jour.data, form.hotel.data)
+    formS = NewService()
+    if formS.validate_on_submit():
+        Service.add_service(3, formS.nameS.data, formS.descrS.data,
+                            formS.hotel.data)
+        return redirect(url_for('index'))
+    return render_template('index.html', title='Home', hotels=h, form=form,
+                           formS=formS)
 
 
 @app.route('/login', methods=['GET', 'POST'])

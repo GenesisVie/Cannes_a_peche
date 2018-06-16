@@ -9,7 +9,7 @@
   <h3>Liste des services :</h3>
   {% for s in hotel.services %}
     <ul>
-      <li>{{ s.name }}</li>
+      <li><b>{{ s.name }}</b> ({{ s.descr }})</li>
     </ul>
   {% endfor %}
   <form action="" method="post">

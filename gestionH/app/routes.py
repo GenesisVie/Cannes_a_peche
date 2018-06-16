@@ -1,8 +1,8 @@
-from app import app
+from app import app, db
 from flask import render_template, flash, redirect, url_for, request
-from app.forms import LoginForm
+from app.forms import LoginForm, PlaceForm, NewService
 from flask_login import current_user, login_user, logout_user, login_required
-from app.models import User, Hotel
+from app.models import User, Hotel, Service
 from werkzeug.urls import url_parse
 
 
@@ -40,3 +40,30 @@ def login():
 def logout():
     logout_user()
     return redirect(url_for('index'))
+
+
+@app.route('/hotel/<id>', methods=['GET', 'POST'])
+@login_required
+def specification(id):
+    h = Hotel.query.filter_by(id=id).first()
+    form = PlaceForm()
+    if form.validate_on_submit():
+        if form.jour.data > 12 or form.number.data > h.numb_place:
+            flash('Nombre de places ou numéro du jour trop élevé')
+        else:
+            for pl in h.places:
+                if pl.id == form.jour.data:
+                    pl.nbr_pl = form.number.data
+                    db.session.commit()
+                    return redirect(f'/hotel/{id}')
+    forms = NewService()
+    if forms.validate_on_submit():
+        service = Service.query.filter_by(name=forms.name.data).first()
+        if service:
+            flash('Service déjà présent')
+        else:
+            s = Service(name=forms.name.data, descr=forms.descr.data,
+                        hotel_id=id)
+            db.session.add(s)
+            db.session.commit()
+    return render_template('hotel.html', hotel=h, form=form, forms=forms)

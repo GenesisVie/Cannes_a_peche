@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h2>Information sur hébergement : {{ hotel.name }}</h2>
+  <h3>Liste disponibilité :</h3>
+  {% for pl in hotel.places %}
+    <p>Jour {{ pl.id }} : {{ pl.date }} : <b>{{ pl.nbr_pl }}</b> places</p>
+  {% endfor %}
+  <h3>Liste des services :</h3>
+  {% for s in hotel.services %}
+    <ul>
+      <li>{{ s.name }}</li>
+    </ul>
+  {% endfor %}
+  <form action="" method="post">
+    {{ form.hidden_tag() }}
+    <p>
+      {{ form.number.label }}
+      {{ form.number(size=10) }}
+      {{ form.jour.label }}
+      {{ form.jour(size=10) }}
+      {{ form.submit() }}
+    </p>
+  </form>
+  <form action="" method="post">
+    {{ form.hidden_tag() }}
+    <p>
+      {{ forms.name.label }}
+      {{ forms.name(size=10) }}
+      {{ forms.descr.label }}
+      {{ forms.descr(size=50) }}
+      {{ forms.submit() }}
+    </p>
+  </form>
+{% endblock %}

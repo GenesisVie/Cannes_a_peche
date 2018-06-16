@@ -1,18 +1,10 @@
 {% extends "base.html" %}
 
 {% block content %}
+
     <h1>Bonjour, {{ current_user.username }}!</h1>
     <p>Voici la liste de vos hébergements : </p>
     {% for h in hotels %}
-      <a href="localhost:5000/{{ h.name }}"><h3>{{ h.name }} ({{ h.type }}, {{ h.numb_place }})</h3></a>
-      {% for s in h.services %}
-        <ul>
-          <li>{{ s.name }}</li>
-        </ul>
-      {% endfor %}
-      <p>Liste disponibilité :</p>
-      {% for pl in h.places %}
-        <p>{{ pl.date }} : {{ pl.nbr_pl }} places</p>
-      {% endfor %}
+      <a href="/hotel/{{ h.id }}"><h3>{{ h.name }} ({{ h.type }}, {{ h.numb_place }})</h3></a>
     {% endfor %}
 {% endblock %}

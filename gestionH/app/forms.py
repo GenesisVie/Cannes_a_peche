@@ -1,5 +1,6 @@
 from flask_wtf import FlaskForm
-from wtforms import StringField, PasswordField, BooleanField, SubmitField, IntegerField
+from wtforms import StringField, PasswordField, BooleanField, SubmitField
+from wtforms import IntegerField
 from wtforms.validators import DataRequired
 
 
@@ -14,12 +15,10 @@ class PlaceForm(FlaskForm):
     number = IntegerField('Nouveau nombre de place :',
                           validators=[DataRequired()])
     jour = IntegerField('Numero jour :', validators=[DataRequired()])
-    hotel = IntegerField('Hotel id :', validators=[DataRequired()])
     submit = SubmitField('OK')
 
 
 class NewService(FlaskForm):
-    nameS = StringField('Nom nouveau service :', validators=[DataRequired()])
-    descrS = StringField('Description service :', validators=[DataRequired()])
-    hotel = IntegerField('Numero Hotel:', validators=[DataRequired()])
-    submitS = SubmitField('OK')
+    name = StringField('Nom nouveau service :', validators=[DataRequired()])
+    descr = StringField('Description service :', validators=[DataRequired()])
+    submit = SubmitField('OK')

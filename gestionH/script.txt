@@ -9,12 +9,12 @@ i.set_password('dbz')
 r = User (id = 3, username = 'Gerrard', statut = False)
 r.set_password('resp')
 
-h = Hotel(id = 1, name = 'Beaux rivages', type = "Hotel", numb_place=20, resp_id= 3, owner_id = 1)
+h = Hotel(id = 1, name = 'Beaux rivages', type = "Hotel", numb_place=30, resp_id= 3, owner_id = 1)
 j = Hotel(id = 2, name = 'Les copains dabord', type = "Auberge", numb_place=50, resp_id= 3, owner_id = 1)
 k = Hotel(id = 3, name = 'Chez Max et Lili', type = "Villa", numb_place=6, resp_id= 3, owner_id = 2)
 
-s = Service(id = 1, name ='bar', descr='Pour se désaltérer', hotel=h)
-d = Service(id = 2, name ='sauna', descr='Eau chauffé à 35 degrés', hotel=h)
+s = Service(id = 1, name ='Bar', descr='Pour se désaltérer', hotel=h)
+d = Service(id = 2, name ='Sauna', descr='Eau chauffé à 35 degrés', hotel=h)
 
 p = Place(id = 1, nbr_pl = 23, date = date(2018,5,8), hotel=h)
 p1 = Place(id = 2, nbr_pl = 23, date = date(2018,5,9), hotel=h)

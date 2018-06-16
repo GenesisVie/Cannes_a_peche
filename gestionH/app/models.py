@@ -68,3 +68,39 @@ class Place(db.Model):
             if pl.date == date:
                 pl.nbr_pl = nbr_pl
         db.session.commit()
+
+
+class Pro(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    statut = db.Column(db.String(10), default='jury')
+    name = db.Column(db.String(64), index=True, unique=True)
+    surname = db.Column(db.String(64))
+    # si fait partie d'une équipe de film
+    film_id = db.Column(db.Integer, db.ForeignKey('film.id'))
+    eqfilm = db.relationship('Film', foreign_keys='Pro.film_id')
+    # si fait partie d'un jury
+    type_id = db.Column(db.Integer, db.ForeignKey('type.id'))
+    typejury = db.relationship('Type', foreign_keys='Pro.type_id')
+
+    def __repr__(self):
+        return f'<Pro {self.name}>'
+
+
+class Film(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    title = db.Column(db.String(64), index=True, unique=True)
+    resume = db.Column(db.String(64))
+    type_id = db.Column(db.Integer, db.ForeignKey('type.id'))
+    equipe = db.relationship('Pro', backref='film')
+
+    def __repr__(self):
+        return f'<Film {self.title}>'
+
+
+class Type(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(64), index=True, unique=True)
+    films = db.relationship('Film', uselist=False, backref='type')
+
+    def __repr__(self):
+        return f'<Type_film {self.name}>'

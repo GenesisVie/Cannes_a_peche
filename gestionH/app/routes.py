@@ -2,7 +2,7 @@ from app import app, db
 from flask import render_template, flash, redirect, url_for, request
 from app.forms import LoginForm, PlaceForm, NewService
 from flask_login import current_user, login_user, logout_user, login_required
-from app.models import User, Hotel, Service
+from app.models import User, Hotel, Service, Pro
 from werkzeug.urls import url_parse
 
 
@@ -11,10 +11,9 @@ from werkzeug.urls import url_parse
 @login_required
 def index():
     if current_user.statut is True:
-        h = Hotel.query.filter_by(owner_id=current_user.id)
+        h = Hotel.query.filter_by(owner_id=current_user.id).all()
     else:
-        h = Hotel.query.filter_by(resp_id=current_user.id)
-        return redirect(url_for('index'))
+        h = Hotel.query.filter_by(resp_id=current_user.id).all()
     return render_template('index.html', title='Home', hotels=h)
 
 
@@ -67,3 +66,10 @@ def specification(id):
             db.session.add(s)
             db.session.commit()
     return render_template('hotel.html', hotel=h, form=form, forms=forms)
+
+
+@app.route('/assign', methods=['GET', 'POST'])
+@login_required
+def assign():
+    p = Pro.query.filter_by().all()
+    return render_template('assign.html', pros=p)

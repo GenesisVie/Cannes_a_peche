@@ -20,7 +20,7 @@ public class JDBC
             // now do whatever you want to do with the connection
             // ...
             Statement stmt = conn.createStatement();
-            ResultSet rs =stmt.executeQuery("select * from Jury");
+            ResultSet rs =stmt.executeQuery("select * from lol");
             while(rs.next())
                 System.out.println(rs);
             stmt.close();

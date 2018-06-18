@@ -3,7 +3,7 @@
   <grid id="27dc6" binding="panel1" default-binding="true" layout-manager="GridLayoutManager" row-count="2" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
     <margin top="0" left="0" bottom="0" right="0"/>
     <constraints>
-      <xy x="20" y="20" width="1614" height="995"/>
+      <xy x="20" y="20" width="1827" height="995"/>
     </constraints>
     <properties/>
     <border type="none"/>
@@ -57,6 +57,65 @@
         </properties>
         <border type="none"/>
         <children>
+          <grid id="ba9b0" binding="PanelPlanning" layout-manager="GridLayoutManager" row-count="3" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+            <margin top="0" left="0" bottom="0" right="0"/>
+            <constraints/>
+            <properties/>
+            <border type="none"/>
+            <children>
+              <component id="60fe5" class="javax.swing.JLabel" binding="LabelJour">
+                <constraints>
+                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="Jour :"/>
+                </properties>
+              </component>
+              <component id="73969" class="javax.swing.JComboBox" binding="Jour">
+                <constraints>
+                  <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <model>
+                    <item value="Jour 1"/>
+                    <item value="Jour 2"/>
+                    <item value="Jour 3"/>
+                    <item value="Jour 4"/>
+                    <item value="Jour 5"/>
+                    <item value="Jour 6"/>
+                    <item value="Jour 7"/>
+                    <item value="Jour 8"/>
+                    <item value="Jour 9"/>
+                    <item value="Jour 10"/>
+                  </model>
+                </properties>
+              </component>
+              <component id="bc124" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="Films :"/>
+                </properties>
+              </component>
+              <component id="5adfe" class="javax.swing.JTextPane" binding="AffichageFilm">
+                <constraints>
+                  <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                    <preferred-size width="150" height="50"/>
+                  </grid>
+                </constraints>
+                <properties/>
+              </component>
+              <component id="fd21c" class="javax.swing.JButton" binding="SubmitButton">
+                <constraints>
+                  <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="7" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="Générer"/>
+                </properties>
+              </component>
+            </children>
+          </grid>
           <component id="e7848" class="javax.swing.JLabel" binding="imgAcc">
             <constraints/>
             <properties>
@@ -64,7 +123,7 @@
               <horizontalTextPosition value="10"/>
               <icon value="img/9278561.image.jpg"/>
               <text value=""/>
-              <visible value="false"/>
+              <visible value="true"/>
             </properties>
           </component>
         </children>

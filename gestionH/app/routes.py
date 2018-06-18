@@ -86,7 +86,8 @@ def assignement(nom):
     for a in assigns:
         if a.pro_name == nom:
             r = 'Réservation déjà effectué'
-            return render_template('assignement.html', hotels=h, message=r, form=form)
+            return render_template('assignement.html', hotels=h, message=r,
+                                   form=form)
 
     h = Hotel.query.all()
 

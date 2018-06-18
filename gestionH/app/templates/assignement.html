@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Liste hotels possible :</h2>
+{{ personne }}
+{{ message }}
+{% for h in hotels %}
+  <p>{{ h.name }} // {{ h.type }} ({{ h.numb_place }})</p>
+{% endfor %}
+<form action="" method="post">
+  {{ form.hidden_tag() }}
+  <p>
+    {{ form.hotel.label }}
+    {{ form.hotel(size=32) }}
+    <br/>
+    {{ form.date_deb.label }}
+    {{ form.date_deb }}
+    {{ form.date_fin.label }}
+    {{ form.date_fin }}
+    {{ form.submit() }}
+  </p>
+</form>
+{% endblock %}

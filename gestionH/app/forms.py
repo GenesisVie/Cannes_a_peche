@@ -1,7 +1,8 @@
 from flask_wtf import FlaskForm
 from wtforms import StringField, PasswordField, BooleanField, SubmitField
-from wtforms import IntegerField
+from wtforms import IntegerField, DateField
 from wtforms.validators import DataRequired
+from datetime import date
 
 
 class LoginForm(FlaskForm):
@@ -21,4 +22,13 @@ class PlaceForm(FlaskForm):
 class NewService(FlaskForm):
     name = StringField('Nom nouveau service :', validators=[DataRequired()])
     descr = StringField('Description service :', validators=[DataRequired()])
+    submit = SubmitField('OK')
+
+
+class AssignForm(FlaskForm):
+    hotel = StringField('Nom hotel choisi :', validators=[DataRequired()])
+    date_deb = DateField('Date début :', default=date(2018, 5, 8),
+                         validators=[DataRequired()])
+    date_fin = DateField('Date fin :', default=date(2018, 5, 8),
+                         validators=[DataRequired()])
     submit = SubmitField('OK')

@@ -1,8 +1,8 @@
 from app import app, db
 from flask import render_template, flash, redirect, url_for, request
-from app.forms import LoginForm, PlaceForm, NewService
+from app.forms import LoginForm, PlaceForm, NewService, AssignForm
 from flask_login import current_user, login_user, logout_user, login_required
-from app.models import User, Hotel, Service, Pro
+from app.models import User, Hotel, Service, Pro, Assign
 from werkzeug.urls import url_parse
 
 
@@ -71,5 +71,39 @@ def specification(id):
 @app.route('/assign', methods=['GET', 'POST'])
 @login_required
 def assign():
-    p = Pro.query.filter_by().all()
-    return render_template('assign.html', pros=p)
+    p = Pro.query.all()
+    a = Assign.query.all()
+    return render_template('assign.html', pros=p, assigns=a)
+
+
+@app.route('/assign/<nom>', methods=['GET', 'POST'])
+@login_required
+def assignement(nom):
+    form = AssignForm()
+    r = ''
+    h = []
+    assigns = Assign.query.all()
+    for a in assigns:
+        if a.pro_name == nom:
+            r = 'Réservation déjà effectué'
+            return render_template('assignement.html', hotels=h, message=r, form=form)
+
+    h = Hotel.query.all()
+
+    def validation_hotel(hotel):
+        hotels = Hotel.query.all()
+        for h in hotels:
+            if hotel == h.name:
+                return True
+        return False
+
+    if form.validate_on_submit():
+        if validation_hotel(form.hotel.data):
+            a = Assign(pro_name=nom, hotel_name=form.hotel.data)
+            db.session.add(a)
+            db.session.commit()
+            return redirect('/assign')
+        else:
+            flash('Nom hotel incorrect')
+
+    return render_template('assignement.html', hotels=h, message=r, form=form)

@@ -104,3 +104,14 @@ class Type(db.Model):
 
     def __repr__(self):
         return f'<Type_film {self.name}>'
+
+
+class Assign(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    pro_name = db.Column(db.String(64), db.ForeignKey('pro.name'))
+    hotel_name = db.Column(db.String(64), db.ForeignKey('hotel.name'))
+    date_deb = db.Column(db.Date)
+    date_fin = db.Column(db.Date)
+
+    def __repr__(self):
+        return f'<Assign {self.pro_name}|{self.hotel_name}>'

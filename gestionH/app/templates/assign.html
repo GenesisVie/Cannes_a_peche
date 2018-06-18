@@ -3,6 +3,23 @@
 {% block content %}
   <h2>Affectation invités</h2>
   {% for p in pros %}
-  <p><a href="/assign/{{ p.id }}">{{ p.name }} {{ p.surname }} ({{ p.statut }})</a></p>
+  <p><a href="/assign/{{ p.name }}">{{ p.name }} {{ p.surname }} ({{ p.statut }})</a></p>
   {% endfor %}
+  <h2>Liste affectations : </h2>
+  <table>
+    <tr>
+      <th>Nom professionnel</th>
+      <th>Nom hotel</th>
+      <th>Date début</th>
+      <th>Date fin</th>
+    </tr>
+    {% for a in assigns %}
+    <tr>
+      <td>{{ a.pro_name }}</td>
+      <td>{{ a.hotel_name }}</td>
+      <td>{{ a.date_deb }}</td>
+      <td>{{ a.date_fin }}</td>
+    </tr>
+  {% endfor %}
+  </table>
 {% endblock %}

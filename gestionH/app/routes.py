@@ -2,9 +2,9 @@ from app import app, db
 from flask import render_template, flash, redirect, url_for, request
 from app.forms import LoginForm, PlaceForm, NewService, AssignForm
 from flask_login import current_user, login_user, logout_user, login_required
-from app.models import User, Hotel, Service, Pro, Assign, Place
+from app.models import User, Hotel, Service, Pro, Assign
 from werkzeug.urls import url_parse
-import datetime
+
 
 @app.route('/', methods=['GET', 'POST'])
 @app.route('/index', methods=['GET', 'POST'])

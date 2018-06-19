@@ -1,12 +1,41 @@
 {% extends "base.html" %}
 
 {% block content %}
+  <style>
+  table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+  }
+
+  td, th {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 8px;
+  }
+
+  tr:nth-child(even) {
+      background-color: #dddddd;
+  }
+  a:link, a:visited {
+      background-color: #01A9DB;
+      color: white;
+      padding: 14px 25px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+  }
+
+  a:hover, a:active {
+      background-color: red;
+  }
+  </style>
   <h2>Affectation invités</h2>
   {% for p in pros %}
   <p><a href="/assign/{{ p.name }}">{{ p.name }} {{ p.surname }} ({{ p.statut }})</a></p>
   {% endfor %}
   <h2>Liste affectations : </h2>
-  <table>
+  <table style="width:100%">
     <tr>
       <th>Nom professionnel</th>
       <th>Nom hotel</th>

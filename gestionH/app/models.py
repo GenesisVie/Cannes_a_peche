@@ -60,7 +60,7 @@ class Place(db.Model):
     hotel_id = db.Column(db.Integer, db.ForeignKey('hotel.id'))
 
     def __repr__(self):
-        return f'<Place {self.nbr_pl}><Date {self.date}>'
+        return f'{self.nbr_pl}|{self.date}'
 
     @staticmethod
     def change_pl(nbr_pl, date, hotel):

@@ -2,9 +2,9 @@ from app import app, db
 from flask import render_template, flash, redirect, url_for, request
 from app.forms import LoginForm, PlaceForm, NewService, AssignForm
 from flask_login import current_user, login_user, logout_user, login_required
-from app.models import User, Hotel, Service, Pro, Assign
+from app.models import User, Hotel, Service, Pro, Assign, Place
 from werkzeug.urls import url_parse
-
+import datetime
 
 @app.route('/', methods=['GET', 'POST'])
 @app.route('/index', methods=['GET', 'POST'])
@@ -100,8 +100,17 @@ def assignement(nom):
 
     if form.validate_on_submit():
         if validation_hotel(form.hotel.data):
-            a = Assign(pro_name=nom, hotel_name=form.hotel.data)
+            a = Assign(pro_name=nom, hotel_name=form.hotel.data,
+                       date_deb=form.date_deb.data,
+                       date_fin=form.date_fin.data)
             db.session.add(a)
+            h_modif = Hotel.query.filter_by(name=form.hotel.data).first()
+            for h in h_modif.places:
+                if h.date >= form.date_deb.data and h.date <= form.date_fin.data:
+                    h.nbr_pl -= 1
+                    if h.nbr_pl < 0:
+                        h.nbr_pl = 0
+                        flash('Plus de places dans cet hébergement')
             db.session.commit()
             return redirect('/assign')
         else:

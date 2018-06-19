@@ -27,8 +27,10 @@ class NewService(FlaskForm):
 
 class AssignForm(FlaskForm):
     hotel = StringField('Nom hotel choisi :', validators=[DataRequired()])
-    date_deb = DateField('Date début :', default=date(2018, 5, 8),
+    date_deb = DateField('Date début :', format='%Y-%m-%d',
+                         default=date(2018, 5, 8),
                          validators=[DataRequired()])
-    date_fin = DateField('Date fin :', default=date(2018, 5, 8),
+    date_fin = DateField('Date fin :', format='%Y-%m-%d',
+                         default=date(2018, 5, 19),
                          validators=[DataRequired()])
     submit = SubmitField('OK')

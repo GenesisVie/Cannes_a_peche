@@ -1,17 +1,35 @@
 {% extends "base.html" %}
 
 {% block content %}
+<style>
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+a:link, a:visited {
+    background-color: #01A9DB;
+    color: white;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+a:hover, a:active {
+    background-color: red;
+}
+</style>
   <h2>Information sur hébergement : {{ hotel.name }}</h2>
-  <h3>Liste disponibilité :</h3>
-  {% for pl in hotel.places %}
-    <p>Jour {{ pl.id }} : {{ pl.date }} : <b>{{ pl.nbr_pl }}</b> places</p>
-  {% endfor %}
-  <h3>Liste des services :</h3>
-  {% for s in hotel.services %}
-    <ul>
-      <li><b>{{ s.name }}</b> ({{ s.descr }})</li>
-    </ul>
-  {% endfor %}
   <form action="" method="post">
     {{ form.hidden_tag() }}
     <p>
@@ -32,4 +50,24 @@
       {{ forms.submit() }}
     </p>
   </form>
+  <h3>Liste des services :</h3>
+  {% for s in hotel.services %}
+    <ul>
+      <li><b>{{ s.name }}</b> ({{ s.descr }})</li>
+    </ul>
+  {% endfor %}
+  <h3>Liste disponibilité :</h3>
+  <table style="width:100%">
+    <tr>
+      <th>Jour</th>
+      <th>Date</th>
+      <th>Places</th>
+    </tr>
+    {% for pl in hotel.places %}
+      <tr>
+        <td>{{ pl.id }}</td>
+        <td>{{ pl.date }}</td>
+        <td>{{ pl.nbr_pl }}</td>
+      </tr>
+    {% endfor %}
 {% endblock %}

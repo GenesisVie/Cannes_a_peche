@@ -19,6 +19,6 @@ a:hover, a:active {
     <h1>Bonjour, {{ current_user.username }}!</h1>
     <p>Voici la liste de vos hébergements : </p>
     {% for h in hotels %}
-      <a href="/hotel/{{ h.id }}"><h3>{{ h.name }} ({{ h.type }}, {{ h.numb_place }})</h3></a>
+      <h3><a href="/hotel/{{ h.id }}">{{ h.name }} ({{ h.type }}, {{ h.numb_place }})</a></h3>
     {% endfor %}
 {% endblock %}

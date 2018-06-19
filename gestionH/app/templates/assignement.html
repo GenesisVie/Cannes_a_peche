@@ -5,7 +5,7 @@
 {{ personne }}
 {{ message }}
 {% for h in hotels %}
-  <p>{{ h.name }} // {{ h.type }} ({{ h.numb_place }})</p>
+  <h3>{{ h.name }} // {{ h.type }} ({{ h.numb_place }})</h3>
     {% for pl in h.places %}
       <p>Jour {{ pl.id }} : {{ pl.date }} : <b>{{ pl.nbr_pl }}</b> places</p>
     {% endfor %}

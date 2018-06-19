@@ -1,24 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="accueil">
-  <grid id="27dc6" binding="panel1" default-binding="true" layout-manager="GridLayoutManager" row-count="2" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
-    <margin top="0" left="0" bottom="0" right="0"/>
+  <grid id="27dc6" binding="panel1" default-binding="true" layout-manager="GridBagLayout">
     <constraints>
-      <xy x="20" y="20" width="1827" height="995"/>
+      <xy x="20" y="20" width="2052" height="1327"/>
     </constraints>
     <properties/>
-    <border type="none"/>
+    <border type="none">
+      <title-color color="-16777216"/>
+    </border>
     <children>
-      <grid id="98ef7" binding="panelMenu" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="0">
+      <grid id="dd3e8" binding="panelMain" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
         <constraints>
           <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="1.0" weighty="1.0"/>
         </constraints>
-        <properties/>
+        <properties>
+          <visible value="true"/>
+        </properties>
         <border type="none"/>
         <children>
           <toolbar id="91ed4">
             <constraints/>
             <properties/>
-            <border type="none"/>
+            <border type="none">
+              <title-color color="-16777216"/>
+            </border>
             <children>
               <component id="718e9" class="javax.swing.JButton" binding="accueilB">
                 <constraints/>
@@ -48,22 +54,60 @@
           </toolbar>
         </children>
       </grid>
-      <grid id="dd3e8" binding="panelAcc" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
+      <grid id="ba9b0" binding="PanelPlanning" layout-manager="GridLayoutManager" row-count="4" column-count="4" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+        <margin top="0" left="0" bottom="0" right="0"/>
         <constraints>
-          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="1.0" weighty="1.0"/>
         </constraints>
-        <properties>
-          <visible value="true"/>
-        </properties>
+        <properties/>
         <border type="none"/>
         <children>
-          <grid id="ba9b0" binding="PanelPlanning" layout-manager="GridLayoutManager" row-count="3" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+          <component id="e7848" class="javax.swing.JLabel" binding="imgAcc">
+            <constraints>
+              <grid row="3" column="0" row-span="1" col-span="4" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <horizontalAlignment value="10"/>
+              <horizontalTextPosition value="10"/>
+              <icon value="img/9278561.image.jpg"/>
+              <text value=""/>
+              <visible value="false"/>
+            </properties>
+          </component>
+          <grid id="68be9" layout-manager="GridLayoutManager" row-count="5" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
             <margin top="0" left="0" bottom="0" right="0"/>
-            <constraints/>
+            <constraints>
+              <grid row="1" column="0" row-span="1" col-span="4" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+            </constraints>
             <properties/>
             <border type="none"/>
             <children>
-              <component id="60fe5" class="javax.swing.JLabel" binding="LabelJour">
+              <component id="fd21c" class="javax.swing.JButton" binding="SubmitButton">
+                <constraints>
+                  <grid row="2" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="7" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="Générer"/>
+                </properties>
+              </component>
+              <component id="c57cb" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="4" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="2" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="                                "/>
+                </properties>
+              </component>
+              <component id="5cfa4" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="2" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="                                "/>
+                </properties>
+              </component>
+              <component id="c5bf9" class="javax.swing.JLabel" binding="LabelJour">
                 <constraints>
                   <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                 </constraints>
@@ -71,11 +115,20 @@
                   <text value="Jour :"/>
                 </properties>
               </component>
-              <component id="73969" class="javax.swing.JComboBox" binding="Jour">
+              <component id="e46b6" class="javax.swing.JLabel" binding="filmsLabel">
+                <constraints>
+                  <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="Planning :"/>
+                </properties>
+              </component>
+              <component id="cd337" class="javax.swing.JComboBox" binding="Jour">
                 <constraints>
                   <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties>
+                  <enabled value="false"/>
                   <model>
                     <item value="Jour 1"/>
                     <item value="Jour 2"/>
@@ -87,45 +140,77 @@
                     <item value="Jour 8"/>
                     <item value="Jour 9"/>
                     <item value="Jour 10"/>
+                    <item value="Jour 11"/>
+                    <item value="Jour 12"/>
                   </model>
                 </properties>
               </component>
-              <component id="bc124" class="javax.swing.JLabel">
+              <component id="1cd0" class="javax.swing.JList" binding="addFilmList">
                 <constraints>
-                  <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-                </constraints>
-                <properties>
-                  <text value="Films :"/>
-                </properties>
-              </component>
-              <component id="5adfe" class="javax.swing.JTextPane" binding="AffichageFilm">
-                <constraints>
-                  <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                  <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="6" hsize-policy="2" anchor="0" fill="3" indent="0" use-parent-layout="false">
                     <preferred-size width="150" height="50"/>
                   </grid>
                 </constraints>
                 <properties/>
               </component>
-              <component id="fd21c" class="javax.swing.JButton" binding="SubmitButton">
+            </children>
+          </grid>
+          <grid id="889e7" layout-manager="GridLayoutManager" row-count="3" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+            <margin top="0" left="0" bottom="0" right="0"/>
+            <constraints>
+              <grid row="2" column="0" row-span="1" col-span="4" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                <preferred-size width="254" height="30"/>
+              </grid>
+            </constraints>
+            <properties/>
+            <border type="none"/>
+            <children>
+              <component id="70db0" class="javax.swing.JLabel" binding="nomfilmLab">
                 <constraints>
-                  <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="7" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties>
-                  <text value="Générer"/>
+                  <text value="Nom du film :"/>
+                </properties>
+              </component>
+              <component id="7a749" class="javax.swing.JLabel" binding="horaireLab">
+                <constraints>
+                  <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="Horaire : "/>
+                </properties>
+              </component>
+              <component id="f481" class="javax.swing.JComboBox" binding="horaireCombo">
+                <constraints>
+                  <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <model>
+                    <item value="Matin"/>
+                    <item value="Midi"/>
+                    <item value="Soir"/>
+                  </model>
+                </properties>
+              </component>
+              <component id="11473" class="javax.swing.JButton" binding="ajouterButton">
+                <constraints>
+                  <grid row="2" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="7" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="Ajouter"/>
+                </properties>
+              </component>
+              <component id="f4578" class="javax.swing.JComboBox" binding="filmCombo">
+                <constraints>
+                  <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <model/>
                 </properties>
               </component>
             </children>
           </grid>
-          <component id="e7848" class="javax.swing.JLabel" binding="imgAcc">
-            <constraints/>
-            <properties>
-              <horizontalAlignment value="10"/>
-              <horizontalTextPosition value="10"/>
-              <icon value="img/9278561.image.jpg"/>
-              <text value=""/>
-              <visible value="true"/>
-            </properties>
-          </component>
         </children>
       </grid>
     </children>

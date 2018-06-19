@@ -2,7 +2,7 @@
 <project version="4">
   <component name="dataSourceStorageLocal">
     <data-source name="bdd_planning@localhost" uuid="075c5b88-97bd-441d-a901-14c48d14f6ae">
-      <database-info product="MySQL" version="10.1.33-MariaDB" jdbc-version="4.2" driver-name="MariaDB connector/J" driver-version="2.2.5">
+      <database-info product="MySQL" version="10.1.33-MariaDB" jdbc-version="4.2" driver-name="MariaDB connector/J" driver-version="2.2.1">
         <extra-name-characters>#@</extra-name-characters>
         <identifier-quote-string>`</identifier-quote-string>
       </database-info>

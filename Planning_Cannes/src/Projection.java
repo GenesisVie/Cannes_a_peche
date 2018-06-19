@@ -1,35 +1,28 @@
-/***********************************************************************
- * Module:  Projection.java
- * Author:  p1604581
- * Purpose: Defines the Class Projection
- ***********************************************************************/
-/*
-public class Projection extends Film Salle {
-   private int dateP;
+
+
+public class Projection extends Film{
+   private int Jour;
    private int heureP;
-   private Film filmA;
-   private Salle salleB;
 
    public Projection() {
-      dateP = 0;
+      super();
+      Jour = 0;
       heureP = 0;
-      filmA = "";
-      salleB = "";
    }
 
-   public Projection(int d,int h, Film f, Salle s) {
-      dateP = d;
+   public Projection(int d,int h, String nomFilm, int dureeF) {
+
+      super(nomFilm,dureeF);
+      Jour = d;
       heureP = h;
-      filmA = f;
-      salleB = s;
    }
 
-   public int getDateP() {
-      return dateP;
+   public int getJour() {
+      return Jour;
    }
 
-   public void setDateP(int newDateP) {
-      dateP = newDateP;
+   public void setJour(int newJour) {
+      Jour = newJour;
    }
 
    public void addSeance() {
@@ -37,4 +30,3 @@ public class Projection extends Film Salle {
    }
 
 }
-*/

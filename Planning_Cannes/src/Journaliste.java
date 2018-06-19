@@ -1,62 +1,33 @@
-/***********************************************************************
- * Module:  Journaliste.java
- * Author:  p1623124
- * Purpose: Defines the Class Journaliste
- ***********************************************************************/
-
-/** @pdOid e07731bb-bb69-4246-92a7-764b7002afc5 */
 public class Journaliste {
-   /** @pdRoleInfo migr=no name=Individu assc=association4 coll=java.util.Collection impl=java.util.HashSet mult=0..* */
-   public java.util.Collection<Individu> individu;
-   
-   
-   /** @pdGenerated default getter */
-   public java.util.Collection<Individu> getIndividu() {
-      if (individu == null)
-         individu = new java.util.HashSet<Individu>();
-      return individu;
+   private int idJ;
+   private String prenomJ;
+   private String nomJ;
+   private int telJ;
+
+   public Journaliste() {
+      idJ = 0 ;
+      prenomJ = "" ;
+      nomJ = "";
+      telJ = 0;
    }
-   
-   /** @pdGenerated default iterator getter */
-   public java.util.Iterator getIteratorIndividu() {
-      if (individu == null)
-         individu = new java.util.HashSet<Individu>();
-      return individu.iterator();
+
+   public Journaliste(int id, String n, String p, int t) {
+      idJ = id;
+      prenomJ = n ;
+      nomJ = p;
+      telJ = t;
    }
-   
-   /** @pdGenerated default setter
-     * @param newIndividu */
-   public void setIndividu(java.util.Collection<Individu> newIndividu) {
-      removeAllIndividu();
-      for (java.util.Iterator iter = newIndividu.iterator(); iter.hasNext();)
-         addIndividu((Individu)iter.next());
+
+   public Journaliste(int id, String n, String p) {
+      idJ = id;
+      prenomJ = n ;
+      nomJ = p;
    }
-   
-   /** @pdGenerated default add
-     * @param newIndividu */
-   public void addIndividu(Individu newIndividu) {
-      if (newIndividu == null)
-         return;
-      if (this.individu == null)
-         this.individu = new java.util.HashSet<Individu>();
-      if (!this.individu.contains(newIndividu))
-         this.individu.add(newIndividu);
+
+   public int getById() {
+      return idJ;
    }
-   
-   /** @pdGenerated default remove
-     * @param oldIndividu */
-   public void removeIndividu(Individu oldIndividu) {
-      if (oldIndividu == null)
-         return;
-      if (this.individu != null)
-         if (this.individu.contains(oldIndividu))
-            this.individu.remove(oldIndividu);
-   }
-   
-   /** @pdGenerated default removeAll */
-   public void removeAllIndividu() {
-      if (individu != null)
-         individu.clear();
-   }
+
+
 
 }

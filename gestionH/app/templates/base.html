@@ -6,6 +6,20 @@
       <title>Hébergement Cannes</title>
       {% endif %}
     </head>
+    <style>
+    a:link, a:visited {
+        background-color: #01A9DB;
+        color: white;
+        padding: 14px 25px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+    }
+
+    a:hover, a:active {
+        background-color: red;
+    }
+    </style>
     <body>
         <div>Menu Hébergement Cannes:
           <a href="{{ url_for('index') }}">Home</a>

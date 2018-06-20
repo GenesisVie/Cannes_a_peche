@@ -1,8 +1,4 @@
-/***********************************************************************
- * Module:  Typefilm.java
- * Author:  p1604581
- * Purpose: Defines the Class Typefilm
- ***********************************************************************/
+package Classe;
 
 import java.util.*;
 

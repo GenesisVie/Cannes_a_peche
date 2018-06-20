@@ -1,10 +1,15 @@
 
+import DAO.Connect;
+import net.proteanit.sql.DbUtils;
+
 import javax.swing.*;
+import javax.swing.JTable;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.sql.*;
-
-import DAO.Connect;
+import java.sql.ResultSet;
+import java.sql.ResultSetMetaData;
+import java.sql.SQLException;
+import java.sql.Statement;
 
 public class accueil extends JFrame {
 
@@ -17,7 +22,10 @@ public class accueil extends JFrame {
     private JComboBox Jour;
     private JList addFilmList;
     private JComboBox filmCombo;
-    private String requete = "SELECT * FROM "
+    private JTable tab;
+    private String requetef = "select nomF,film.selectionF,nomS from film,salle where film.selectionF='CM' and salle.SelectionF='CM' ;";
+    private String requetes = "Select nomS from salle;";
+
 
     public accueil() {
 
@@ -29,22 +37,38 @@ public class accueil extends JFrame {
         filmsLabel.setVisible(false);
         SubmitButton.setVisible(false);
         addFilmList.setVisible(false);
-
+        tab.setVisible(false);
         ajouterButton.setVisible(false);
         nomfilmLab.setVisible(false);
         horaireLab.setVisible(false);
         filmCombo.setVisible(false);
         horaireCombo.setVisible(false);
 
+        SubmitButton.addActionListener(new GenererPlanning());
         planningB.addActionListener(new MenuListenerPlanning());
         ajoutB.addActionListener(new MenuListenerAdd());
         accueilB.addActionListener(new MenuListenerAcc());
-
-
+        this.setContentPane(new Panneau());
+        initPlanning(requetef);
 
     }
 
-    
+    public void initPlanning(String query) {
+        try{
+            Statement state = Connect.Connexion().createStatement();
+            ResultSet resCM = state.executeQuery(query);
+            ResultSetMetaData meta = resCM.getMetaData();
+
+            tab.setModel(DbUtils.resultSetToTableModel(resCM));
+
+
+
+            resCM.close();
+            state.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
 
     public static void main(String[] args) {
         JFrame fen = new JFrame();
@@ -71,6 +95,7 @@ public class accueil extends JFrame {
                 horaireLab.setVisible(false);
                 addFilmField.setVisible(false);
                 horaireCombo.setVisible(false);
+                tab.setVisible(true);
             }
         }
     }
@@ -92,6 +117,7 @@ public class accueil extends JFrame {
                 addFilmField.setVisible(true);
                 addFilmLab.setVisible(true);
                 horaireCombo.setVisible(true);
+                tab.setVisible(true);
             }
         }
     }
@@ -112,9 +138,21 @@ public class accueil extends JFrame {
                 horaireLab.setVisible(false);
                 addFilmField.setVisible(false);
                 horaireCombo.setVisible(false);
+                tab.setVisible(false);
             }
         }
     }
 
+    public class GenererPlanning implements ActionListener{
+        public void actionPerformed(ActionEvent e){
+            if (e.getSource()==SubmitButton)
+            {
+
+            }
+
+        }
+
+
+    }
 
 }

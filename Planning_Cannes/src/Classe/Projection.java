@@ -1,4 +1,4 @@
-
+package Classe;
 
 public class Projection extends Film{
    private int Jour;

@@ -1,3 +1,4 @@
+package Classe;
 
 public class Salle {
     private int idsalle;

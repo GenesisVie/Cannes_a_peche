@@ -959,107 +959,145 @@
     </collation>
     <table id="240" parent="3" name="Journaliste"/>
     <table id="241" parent="3" name="Jury"/>
-    <table id="242" parent="3" name="Projection"/>
-    <table id="243" parent="3" name="film"/>
-    <column id="244" parent="240" name="id">
+    <table id="242" parent="3" name="film"/>
+    <table id="243" parent="3" name="projection"/>
+    <table id="244" parent="3" name="salle"/>
+    <column id="245" parent="240" name="id">
       <Position>1</Position>
       <DataType>mediumint(8) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="245" parent="240" name="PrenomJourn">
+    <column id="246" parent="240" name="PrenomJourn">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="246" parent="240" name="NomJourn">
+    <column id="247" parent="240" name="NomJourn">
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="247" parent="240" name="StatusJourn">
+    <column id="248" parent="240" name="StatusJourn">
       <Position>4</Position>
       <DataType>varchar(100)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="248" parent="240" name="PRIMARY">
+    <key id="249" parent="240" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="249" parent="241" name="id">
+    <column id="250" parent="241" name="id">
       <Position>1</Position>
       <DataType>mediumint(8) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="250" parent="241" name="NomJ">
+    <column id="251" parent="241" name="NomJ">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="251" parent="241" name="PrenomJ">
+    <column id="252" parent="241" name="PrenomJ">
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="252" parent="241" name="SelectionJ">
+    <column id="253" parent="241" name="SelectionJ">
       <Position>4</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="253" parent="241" name="PRIMARY">
+    <key id="254" parent="241" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="254" parent="242" name="id">
+    <column id="255" parent="242" name="id">
       <Position>1</Position>
       <DataType>mediumint(8) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="255" parent="242" name="jour">
-      <Position>2</Position>
-      <DataType>mediumint(9)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="256" parent="242" name="typeS">
-      <Position>3</Position>
-      <DataType>varchar(255)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <key id="257" parent="242" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
-      <ColNames>id</ColNames>
-      <Primary>1</Primary>
-    </key>
-    <column id="258" parent="243" name="id">
-      <Position>1</Position>
-      <DataType>mediumint(8) unsigned|0s</DataType>
-      <NotNull>1</NotNull>
-      <SequenceIdentity>1</SequenceIdentity>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="259" parent="243" name="nomF">
+    <column id="256" parent="242" name="nomF">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="260" parent="243" name="dureeF">
+    <column id="257" parent="242" name="dureeF">
       <Position>3</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="261" parent="243" name="selectionF">
+    <column id="258" parent="242" name="selectionF">
       <Position>4</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="262" parent="243" name="PRIMARY">
+    <key id="259" parent="242" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="260" parent="243" name="id">
+      <Position>1</Position>
+      <DataType>mediumint(8) unsigned|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="261" parent="243" name="jourP">
+      <Position>2</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="262" parent="243" name="horaire">
+      <Position>3</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="263" parent="243" name="nomF">
+      <Position>4</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="264" parent="243" name="nomS">
+      <Position>5</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <key id="265" parent="243" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="266" parent="244" name="id">
+      <Position>1</Position>
+      <DataType>mediumint(8) unsigned|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="267" parent="244" name="nomS">
+      <Position>2</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="268" parent="244" name="nbPlaces">
+      <Position>3</Position>
+      <DataType>mediumint(9)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="269" parent="244" name="SelectionF">
+      <Position>4</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <key id="270" parent="244" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>

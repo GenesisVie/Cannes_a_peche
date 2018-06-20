@@ -71,7 +71,7 @@ def specification(id):
 @app.route('/assign', methods=['GET', 'POST'])
 @login_required
 def assign():
-    p = Pro.query.all()
+    p = Pro.query.order_by(Pro.name).all()
     a = Assign.query.all()
     return render_template('assign.html', pros=p, assigns=a)
 

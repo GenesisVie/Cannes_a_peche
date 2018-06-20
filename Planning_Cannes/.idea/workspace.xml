@@ -64,10 +64,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="JDBC.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/JDBC.java">
+        <entry file="file://$PROJECT_DIR$/src/TESTJDBC/JDBC.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="182">
-              <caret line="11" column="27" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="51" />
+            <state relative-caret-position="102">
+              <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -78,7 +78,7 @@
       <file leaf-file-name="Connect.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/DAO/Connect.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
+            <state relative-caret-position="340">
               <caret line="23" column="12" selection-start-line="23" selection-start-column="12" selection-end-line="23" selection-end-column="12" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -87,17 +87,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="accueil.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="accueil.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/accueil.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="87" column="20" lean-forward="true" selection-start-line="87" selection-start-column="20" selection-end-line="87" selection-end-column="20" />
+            <state relative-caret-position="901">
+              <caret line="64" selection-start-line="35" selection-end-line="64" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="method#accueil#0;class#accueil#0" />
-                <element signature="method#initPlanning#0;class#accueil#0" />
-                <element signature="class#MenuListenerAdd#0;class#accueil#0" />
-                <element signature="class#MenuListenerAcc#0;class#accueil#0" />
+                <element signature="class#GenererPlanning#0;class#accueil#0" />
               </folding>
             </state>
           </provider>
@@ -106,21 +103,20 @@
       <file leaf-file-name="PlanningDAO.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/DAO/PlanningDAO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="26" column="4" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="4" />
+            <state relative-caret-position="969">
+              <caret line="63" selection-start-line="63" selection-end-line="63" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="method#ProjectBD#0;class#PlanningDAO#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Panneau.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Panneau.java">
+      <file leaf-file-name="Panneau.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/TESTJDBC/Panneau.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" column="84" selection-start-line="13" selection-start-column="84" selection-end-line="13" selection-end-column="84" />
+            <state relative-caret-position="204">
+              <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -129,14 +125,10 @@
         </entry>
       </file>
       <file leaf-file-name="Salle.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Classe/Salle.java">
+        <entry file="file://$PROJECT_DIR$/src/Modele/Salle.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="34">
               <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-              <folding>
-                <element signature="e#638#639#0" expanded="true" />
-                <element signature="e#670#671#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -147,7 +139,7 @@
         </entry>
       </file>
       <file leaf-file-name="Film.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Classe/Film.java">
+        <entry file="file://$PROJECT_DIR$/src/Modele/Film.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="68">
               <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
@@ -156,22 +148,16 @@
         </entry>
       </file>
       <file leaf-file-name="Projection.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Classe/Projection.java">
+        <entry file="file://$PROJECT_DIR$/src/Modele/Projection.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="34">
               <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-              <folding>
-                <element signature="e#323#324#0" expanded="true" />
-                <element signature="e#347#348#0" expanded="true" />
-                <element signature="e#386#387#0" expanded="true" />
-                <element signature="e#413#414#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="Typefilm.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Classe/Typefilm.java">
+        <entry file="file://$PROJECT_DIR$/src/Modele/Typefilm.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="85">
               <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
@@ -193,6 +179,12 @@
       <find>local</find>
       <find>DBConnection</find>
       <find>filmCombo</find>
+      <find>addFilmList</find>
+      <find>tab</find>
+      <find>horaireCombo</find>
+      <find>set</find>
+      <find>pane</find>
+      <find>re</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$</dir>
@@ -222,9 +214,10 @@
         <option value="$PROJECT_DIR$/src/Projection.java" />
         <option value="$PROJECT_DIR$/src/Typefilm.java" />
         <option value="$PROJECT_DIR$/src/Classe/Projection.java" />
-        <option value="$PROJECT_DIR$/src/accueil.form" />
-        <option value="$PROJECT_DIR$/src/DAO/PlanningDAO.java" />
         <option value="$PROJECT_DIR$/src/accueil.java" />
+        <option value="$PROJECT_DIR$/src/DAO/PlanningDAO.java" />
+        <option value="$PROJECT_DIR$/src/accueil.form" />
+        <option value="$PROJECT_DIR$/src/Modele/Film.java" />
       </list>
     </option>
   </component>
@@ -239,7 +232,7 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-1" />
-    <option name="width" value="1261" />
+    <option name="width" value="1922" />
     <option name="height" value="1081" />
   </component>
   <component name="ProjectView">
@@ -247,23 +240,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="Planning_Cannes" type="58d84e3e:PackageViewProjectNode" />
-              <item name="Planning_Cannes" type="616d4139:PackageViewModuleNode" />
-            </path>
-            <path>
-              <item name="Planning_Cannes" type="58d84e3e:PackageViewProjectNode" />
-              <item name="Planning_Cannes" type="616d4139:PackageViewModuleNode" />
-              <item name="Libraries" type="5c3f07af:PackageViewLibrariesNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -287,14 +264,14 @@
               <item name="Planning_Cannes" type="47feb1d3:ProjectViewModuleNode" />
               <item name="Planning_Cannes" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Classe" type="462c0819:PsiDirectoryNode" />
+              <item name="DAO" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Planning_Cannes" type="b2602c69:ProjectViewProjectNode" />
               <item name="Planning_Cannes" type="47feb1d3:ProjectViewModuleNode" />
               <item name="Planning_Cannes" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="DAO" type="462c0819:PsiDirectoryNode" />
+              <item name="Modele" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Planning_Cannes" type="b2602c69:ProjectViewProjectNode" />
@@ -311,13 +288,29 @@
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
+      <pane id="PackagesPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Planning_Cannes" type="58d84e3e:PackageViewProjectNode" />
+              <item name="Planning_Cannes" type="616d4139:PackageViewModuleNode" />
+            </path>
+            <path>
+              <item name="Planning_Cannes" type="58d84e3e:PackageViewProjectNode" />
+              <item name="Planning_Cannes" type="616d4139:PackageViewModuleNode" />
+              <item name="Libraries" type="5c3f07af:PackageViewLibrariesNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="UI_DESIGNER_EDITOR_MODE.PaletteManager.STATE" value="ToolWindow" />
     <property name="UI_DESIGNER_EDITOR_MODE.PaletteManager.WIDTH" value="142" />
-    <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.SHOW" value="false" />
+    <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.SHOW" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MariaDB" />
@@ -358,7 +351,7 @@
       <module name="Planning_Cannes" />
     </configuration>
     <configuration name="JDBC" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="JDBC" />
+      <option name="MAIN_CLASS_NAME" value="TESTJDBC.JDBC" />
       <module name="Planning_Cannes" />
     </configuration>
     <configuration name="accueil" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -406,19 +399,22 @@
       <workItem from="1529344942722" duration="2942000" />
       <workItem from="1529409723600" duration="13268000" />
       <workItem from="1529429672483" duration="21167000" />
+      <workItem from="1529457771869" duration="3138000" />
+      <workItem from="1529483283484" duration="6050000" />
+      <workItem from="1529496125349" duration="1276000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="62839000" />
+    <option name="totallyTimeSpent" value="73303000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="0" width="1261" height="1081" extended-state="0" />
+    <frame x="-1" y="0" width="1922" height="1081" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info anchor="right" id="Palette" internal_type="SLIDING" order="6" type="SLIDING" weight="0.035507843" />
+      <window_info anchor="right" id="Palette" internal_type="SLIDING" order="6" type="SLIDING" weight="0.123903506" />
       <window_info anchor="bottom" id="TODO" order="11" />
-      <window_info anchor="bottom" id="Messages" order="4" sideWeight="0.49843588" weight="0.33707866" />
+      <window_info anchor="bottom" id="Messages" order="4" sideWeight="0.49843588" weight="0.33613446" />
       <window_info anchor="right" id="Palette&#9;" order="1" />
       <window_info id="Image Layers" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="0" />
@@ -426,13 +422,12 @@
       <window_info anchor="right" id="Maven Projects" order="4" />
       <window_info anchor="bottom" id="Database Changes" order="0" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="3" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="7" sideWeight="0.4979145" visible="true" weight="0.31617647" />
+      <window_info active="true" anchor="bottom" id="Run" order="7" sideWeight="0.4979145" visible="true" weight="0.31617647" />
       <window_info anchor="bottom" id="Terminal" order="1" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="0" />
-      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.35590422" />
-      <window_info anchor="right" id="Database" order="3" weight="0.28318584" />
-      <window_info anchor="bottom" id="Find" order="6" weight="0.33718488" />
+      <window_info content_ui="combo" id="Project" order="5" visible="true" weight="0.21420941" />
+      <window_info anchor="right" id="Database" order="3" weight="0.28289473" />
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="7" weight="0.25" />
       <window_info id="UI Designer" order="1" />
@@ -445,6 +440,7 @@
       <window_info anchor="bottom" id="Message" order="5" />
       <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
       <window_info anchor="bottom" id="Database Console" order="12" weight="0.32983193" />
+      <window_info anchor="bottom" id="Find" order="6" weight="0.33718488" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -455,7 +451,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="10" />
+      <option name="time" value="13" />
     </breakpoint-manager>
   </component>
   <component name="antWorkspaceConfiguration">
@@ -463,60 +459,24 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/accueil.form">
-      <provider selected="true" editor-type-id="ui-designer" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/JDBC.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="37" selection-start-line="24" selection-start-column="37" selection-end-line="24" selection-end-column="37" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jrt:///usr/lib/jvm/java-9-openjdk!/java.base/jdk/internal/loader/BuiltinClassLoader.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6307">
-          <caret line="371" selection-start-line="371" selection-end-line="371" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Journaliste.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Classe/Salle.java">
+    <entry file="file://$PROJECT_DIR$/src/Journaliste.java" />
+    <entry file="file://$PROJECT_DIR$/src/Modele/Salle.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="918">
           <caret line="62" selection-start-line="62" selection-end-line="62" />
-          <folding>
-            <element signature="e#638#639#0" expanded="true" />
-            <element signature="e#670#671#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Jury.java" />
-    <entry file="file://$PROJECT_DIR$/src/Classe/Projection.java">
+    <entry file="file://$PROJECT_DIR$/src/Modele/Projection.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="663">
           <caret line="39" column="2" selection-start-line="39" selection-start-column="2" selection-end-line="39" selection-end-column="2" />
-          <folding>
-            <element signature="e#323#324#0" expanded="true" />
-            <element signature="e#347#348#0" expanded="true" />
-            <element signature="e#386#387#0" expanded="true" />
-            <element signature="e#413#414#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/PlanningC.java" />
-    <entry file="file://$PROJECT_DIR$/src/JDBC.java">
+    <entry file="file://$PROJECT_DIR$/src/TESTJDBC/JDBC.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="3" column="17" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
@@ -526,14 +486,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Classe/Projection.java">
+    <entry file="file://$PROJECT_DIR$/src/Modele/Projection.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="663">
           <caret line="39" column="2" selection-start-line="39" selection-start-column="2" selection-end-line="39" selection-end-column="2" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Classe/Salle.java">
+    <entry file="file://$PROJECT_DIR$/src/Modele/Salle.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="40" selection-start-line="40" selection-end-line="40" />
@@ -614,71 +574,32 @@
     <entry file="file://$PROJECT_DIR$/src/Model/Journaliste.class" />
     <entry file="file://$PROJECT_DIR$/src/Typefilm.class" />
     <entry file="file://$PROJECT_DIR$/src/PlanningC.java" />
-    <entry file="file://$PROJECT_DIR$/src/Journaliste.java">
+    <entry file="file://$PROJECT_DIR$/src/Journaliste.java" />
+    <entry file="file://$PROJECT_DIR$/src/JournalisteDAO.java" />
+    <entry file="jrt:///usr/lib/jvm/java-9-openjdk!/java.sql/java/sql/ResultSet.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="13" selection-start-column="13" selection-end-column="13" />
+        <state relative-caret-position="102">
+          <caret line="14" column="17" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Panneau.java">
+    <entry file="jar://$PROJECT_DIR$/mariadb-java-client-2.2.1.jar!/org/mariadb/jdbc/internal/com/read/dao/ColumnNameMap.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="84" selection-start-line="13" selection-start-column="84" selection-end-line="13" selection-end-column="84" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="368">
+          <caret line="77" selection-start-line="77" selection-end-line="77" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/JournalisteDAO.java">
+    <entry file="jar://$PROJECT_DIR$/mariadb-java-client-2.2.1.jar!/org/mariadb/jdbc/internal/com/read/resultset/SelectResultSet.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Classe/Film.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Classe/Salle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding>
-            <element signature="e#638#639#0" expanded="true" />
-            <element signature="e#670#671#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Classe/Typefilm.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Classe/Projection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding>
-            <element signature="e#323#324#0" expanded="true" />
-            <element signature="e#347#348#0" expanded="true" />
-            <element signature="e#386#387#0" expanded="true" />
-            <element signature="e#413#414#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="207">
+          <caret line="1015" selection-start-line="1015" selection-end-line="1015" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/DAO/Connect.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
+        <state relative-caret-position="340">
           <caret line="23" column="12" selection-start-line="23" selection-start-column="12" selection-end-line="23" selection-end-column="12" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -686,23 +607,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/JDBC.java">
+    <entry file="file://$PROJECT_DIR$/src/accueil.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="11" column="27" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="51" />
+        <state relative-caret-position="901">
+          <caret line="64" selection-start-line="35" selection-end-line="64" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="class#GenererPlanning#0;class#accueil#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/DAO/PlanningDAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="26" column="4" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="4" />
+        <state relative-caret-position="969">
+          <caret line="63" selection-start-line="63" selection-end-line="63" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#ProjectBD#0;class#PlanningDAO#0" />
           </folding>
         </state>
       </provider>
@@ -710,16 +631,50 @@
     <entry file="file://$PROJECT_DIR$/src/accueil.form">
       <provider selected="true" editor-type-id="ui-designer" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/accueil.java">
+    <entry file="file://$PROJECT_DIR$/src/Modele/Film.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="87" column="20" lean-forward="true" selection-start-line="87" selection-start-column="20" selection-end-line="87" selection-end-column="20" />
+        <state relative-caret-position="68">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Modele/Projection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Modele/Salle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Modele/Typefilm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TESTJDBC/JDBC.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#accueil#0;class#accueil#0" />
-            <element signature="method#initPlanning#0;class#accueil#0" />
-            <element signature="class#MenuListenerAdd#0;class#accueil#0" />
-            <element signature="class#MenuListenerAcc#0;class#accueil#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TESTJDBC/Panneau.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
